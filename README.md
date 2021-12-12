@@ -1,1 +1,1 @@
-# leetcode-practice
+# Repository created for leetcode practice problems.
