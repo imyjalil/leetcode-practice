@@ -11,6 +11,8 @@ public class Solution {
         return solveIterative(arr,k);
     }
 	
+    //TC: o(n*k)
+    //SC: o(n) + implicit stack space
 	public int solveMemoize(int[] arr, int k, int ind, int[] dp)
 	{
         if(ind>=arr.length) return 0;
@@ -29,6 +31,8 @@ public class Solution {
 		return ans;
 	}
     
+	//TC: ???
+	//SC:o(1)+implicit stack space(at max: n recursive calls)
     public int solveRecursive(int[] arr, int k, int ind)
 	{
         if(ind>=arr.length) return 0;
@@ -45,6 +49,8 @@ public class Solution {
 		return ans;
 	}
     
+    //TC:o(n*k)
+    //SC:o(n)
     public int solveIterative(int[] arr, int k)
     {
         int n = arr.length;
