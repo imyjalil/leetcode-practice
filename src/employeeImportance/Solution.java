@@ -1,5 +1,7 @@
 package employeeImportance;
 
+//problem link: https://leetcode.com/problems/employee-importance/
+//Author: imyjalil
 public class Solution {
 	class Emp{
         public int importance;
