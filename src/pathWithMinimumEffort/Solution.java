@@ -1,5 +1,7 @@
 package pathWithMinimumEffort;
 
+//problem link: https://leetcode.com/problems/path-with-minimum-effort/
+//Author: imyjalil
 public class Solution {
 	//TC: O(M*N*log(M*N)) - minheap holds all the vertices in the worst case
     //and all the vertices might go 4 times into the min heap in the worst case

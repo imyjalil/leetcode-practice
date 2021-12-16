@@ -3,6 +3,8 @@ package shortestBridge;
 import java.util.LinkedList;
 import java.util.Queue;
 
+//problem link: https://leetcode.com/problems/shortest-bridge/
+//Author: imyjalil
 public class Solution {
 	public int shortestBridge(int[][] A) {
         int m = A.length, n = A[0].length;

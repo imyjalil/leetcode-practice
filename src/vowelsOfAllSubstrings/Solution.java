@@ -1,6 +1,7 @@
 package vowelsOfAllSubstrings;
 
-//
+//problem link: https://leetcode.com/problems/vowels-of-all-substrings/
+//Author: imyjalil
 public class Solution {
 	public boolean isVowel(char c)
     {
