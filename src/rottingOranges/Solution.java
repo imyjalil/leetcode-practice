@@ -3,6 +3,8 @@ package rottingOranges;
 //problem link: https://leetcode.com/problems/rotting-oranges/
 //Author: imyjalil
 public class Solution {
+	//TC: O(N * M) -> each cell is visited at least once
+	//SC: O(N * M) -> in the worst case if all the oranges are rotten they will be added to the queue
 	public int orangesRotting(int[][] grid) {
         int cnt=0, n=grid.length, m=grid[0].length;
         Queue<int[]>q=new LinkedList<>();
