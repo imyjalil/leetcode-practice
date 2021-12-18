@@ -1,5 +1,7 @@
 package greatestSumDivisibleByThree;
 
+//problem link: https://leetcode.com/problems/greatest-sum-divisible-by-three/
+//Author: imyjalil
 public class Solution {
 	public int maxSumDivThree(int[] nums) {
         //find a subset with largest sum such that sum is divisible by 3
