@@ -1,5 +1,7 @@
 package findTheCityWithSmallestNumberOfNeighborsAtAThresholdDistance;
 
+//problem link: https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
+//Author: imyjalil
 public class Solution {
 	public int findTheCity(int n, int[][] edges, int distanceThreshold) {
         //return solveDjikstra(n, edges, distanceThreshold);
