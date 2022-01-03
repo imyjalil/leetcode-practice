@@ -1,5 +1,7 @@
 package longestTurbulentSubarray;
 
+//problem link: https://leetcode.com/problems/longest-turbulent-subarray/
+//Author: imyjalil
 public class Solution {
 	public int maxTurbulenceSize(int[] arr) {
         int inc=1, dec=1, n = arr.length, ans=1;
