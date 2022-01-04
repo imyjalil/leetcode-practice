@@ -3,7 +3,7 @@ package courseScheduleIV;
 //problem link:https://leetcode.com/problems/course-schedule-iv/
 //Author: imyjalil
 public class Solution {
-	//for both the DFS approaches, dfs is on all nodes, hence
+	//for both the approaches, dfs is on all nodes, hence
     //TC:O(n*n*n*n)-n=numCourses
     public List<Boolean> dfsWitHashSet(int numCourses, int[][] prerequisites, int[][] queries) {
         Map<Integer,Set<Integer>>map=new HashMap<>();
@@ -47,7 +47,8 @@ public class Solution {
     }
     public List<Boolean> checkIfPrerequisite(int numCourses, int[][] prerequisites, int[][] queries) {
         //return dfsWitHashSet(numCourses,prerequisites,queries);
-        return dfsWithMatrix(numCourses,prerequisites,queries);
+        //return dfsWithMatrix(numCourses,prerequisites,queries);
+        return floydWarshall(numCourses,prerequisites,queries);
     }
     
     public void fillGraph(boolean[][] graph, int i, boolean[] visited){
@@ -83,4 +84,23 @@ public class Solution {
             responses.add(graph[query[0]][query[1]]);
         return responses;
     }
-}
+    //TC:O(n*n*n)
+    public List<Boolean> floydWarshall(int n, int[][] prerequisites, int[][] queries){
+        boolean[][] graph = new boolean[n][n];
+        for(int[] prerequisite: prerequisites)
+            graph[prerequisite[0]][prerequisite[1]]=true;
+        for(int k=0;k<n;k++)
+        {
+            for(int i=0;i<n;i++)
+            {
+                for(int j=0;j<n;j++)
+                {
+                    graph[i][j]=graph[i][j]||(graph[i][k] && graph[k][j]);
+                }
+            }
+        }
+        List<Boolean>res=new ArrayList<>();
+        for(int[]query:queries)
+            res.add(graph[query[0]][query[1]]);
+        return res;
+    }}
